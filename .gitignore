@@ -9,3 +9,5 @@ cmake-build-*/
 *.a
 *.out
 .DS_Store
+
+compile_commands.json
