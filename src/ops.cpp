@@ -16,12 +16,10 @@ Tensor matmul(const Tensor &a, const Tensor &b) {
   Tensor out({M, N});
   // Textbook triple loop, no tiling, no vectorization hints.
   for (int i = 0; i < M; ++i) {
-    for (int j = 0; j < N; ++j) {
-      float acc = 0.0f;
-      for (int k = 0; k < K; ++k) {
-        acc += a.at(i, k) * b.at(k, j);
+    for (int k = 0; k < K; ++k) {
+      for (int j = 0; j < N; ++j) {
+        out.at(i, j) += a.at(i, k) * b.at(k, j);
       }
-      out.at(i, j) = acc;
     }
   }
   return out;
