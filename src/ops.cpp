@@ -34,16 +34,25 @@ Tensor linear(const Tensor &x, const Tensor &w, const Tensor &b) {
   const bool has_bias = !b.data.empty();
   assert(!has_bias || b.size() == out);
 
+  // y has shape T x out
+  // x is T x in, w is out x in, b is 1 x out
+  // y is x @ w_t + b
+  // y(t, o) = b(o) + dot(x_t, w_o)
   Tensor y({T, out});
   for (int t = 0; t < T; ++t) {
     const float *xrow = x.row_ptr(t);
     for (int o = 0; o < out; ++o) {
       const float *wrow = w.row_ptr(o);
-      float acc = has_bias ? b[o] : 0.0f;
+      constexpr int slots = 8;
+      float acc[slots] = {0.f, 0.f, 0.f, 0.f,
+                          0.f, 0.f, 0.f, has_bias ? b[o] : 0.0f};
       for (int i = 0; i < in; ++i) {
-        acc += xrow[i] * wrow[i];
+        // data dependency on acc?
+        acc[i % slots] += xrow[i] * wrow[i];
       }
-      y.at(t, o) = acc;
+      for (int i = 0; i < slots; ++i) {
+        y.at(t, o) += acc[i];
+      }
     }
   }
   return y;
