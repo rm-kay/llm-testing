@@ -16,48 +16,48 @@
 namespace testing {
 
 struct AssertionError {
-    std::string msg;
+  std::string msg;
 };
 
 struct TestCase {
-    std::string           name;
-    std::function<void()> fn;
+  std::string name;
+  std::function<void()> fn;
 };
 
-inline std::vector<TestCase>& registry() {
-    static std::vector<TestCase> r;
-    return r;
+inline std::vector<TestCase> &registry() {
+  static std::vector<TestCase> r;
+  return r;
 }
 
 struct Registrar {
-    Registrar(const char* name, std::function<void()> fn) {
-        registry().push_back({name, std::move(fn)});
-    }
+  Registrar(const char *name, std::function<void()> fn) {
+    registry().push_back({name, std::move(fn)});
+  }
 };
 
-}  // namespace testing
+} // namespace testing
 
-#define TEST(name)                                                       \
-    static void name();                                                  \
-    static ::testing::Registrar test_registrar_##name(#name, name);      \
-    static void name()
+#define TEST(name)                                                             \
+  static void name();                                                          \
+  static ::testing::Registrar test_registrar_##name(#name, name);              \
+  static void name()
 
-#define ASSERT_TRUE(cond)                                                \
-    do {                                                                 \
-        if (!(cond)) {                                                   \
-            throw ::testing::AssertionError{                             \
-                std::string(__FILE__) + ":" + std::to_string(__LINE__) + \
-                "  ASSERT_TRUE(" #cond ")"};                             \
-        }                                                                \
-    } while (0)
+#define ASSERT_TRUE(cond)                                                      \
+  do {                                                                         \
+    if (!(cond)) {                                                             \
+      throw ::testing::AssertionError{std::string(__FILE__) + ":" +            \
+                                      std::to_string(__LINE__) +               \
+                                      "  ASSERT_TRUE(" #cond ")"};             \
+    }                                                                          \
+  } while (0)
 
-#define ASSERT_NEAR(a, b, tol)                                           \
-    do {                                                                 \
-        const double _a = (a), _b = (b), _t = (tol);                     \
-        if (std::fabs(_a - _b) > _t) {                                   \
-            throw ::testing::AssertionError{                             \
-                std::string(__FILE__) + ":" + std::to_string(__LINE__) + \
-                "  ASSERT_NEAR(" #a ", " #b "): " +                      \
-                std::to_string(_a) + " vs " + std::to_string(_b)};       \
-        }                                                                \
-    } while (0)
+#define ASSERT_NEAR(a, b, tol)                                                 \
+  do {                                                                         \
+    const double _a = (a), _b = (b), _t = (tol);                               \
+    if (std::fabs(_a - _b) > _t) {                                             \
+      throw ::testing::AssertionError{                                         \
+          std::string(__FILE__) + ":" + std::to_string(__LINE__) +             \
+          "  ASSERT_NEAR(" #a ", " #b "): " + std::to_string(_a) + " vs " +    \
+          std::to_string(_b)};                                                 \
+    }                                                                          \
+  } while (0)

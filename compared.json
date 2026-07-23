@@ -1,0 +1,578 @@
+[
+ {
+  "name": "BM_matmul/N:64",
+  "label": "",
+  "measurements": [
+   {
+    "real_time": 0.05779277209183164,
+    "cpu_time": 0.057720914004914005,
+    "real_time_other": 0.01997974741696918,
+    "cpu_time_other": 0.019956240032689275,
+    "time": -0.654286397869586,
+    "cpu": -0.6542632704847618
+   }
+  ],
+  "time_unit": "ms",
+  "run_type": "iteration",
+  "aggregate_name": "",
+  "utest": {}
+ },
+ {
+  "name": "BM_matmul/N:128",
+  "label": "",
+  "measurements": [
+   {
+    "real_time": 0.7408274169339892,
+    "cpu_time": 0.7399002391534392,
+    "real_time_other": 0.16335740556367398,
+    "cpu_time_other": 0.1631541545770568,
+    "time": -0.7794933046083123,
+    "cpu": -0.7794916855767873
+   }
+  ],
+  "time_unit": "ms",
+  "run_type": "iteration",
+  "aggregate_name": "",
+  "utest": {}
+ },
+ {
+  "name": "BM_matmul/N:256",
+  "label": "",
+  "measurements": [
+   {
+    "real_time": 7.474162223398379,
+    "cpu_time": 7.465147765957444,
+    "real_time_other": 1.2592468075460517,
+    "cpu_time_other": 1.2575601546762587,
+    "time": -0.8315200058671602,
+    "cpu": -0.8315424966655072
+   }
+  ],
+  "time_unit": "ms",
+  "run_type": "iteration",
+  "aggregate_name": "",
+  "utest": {}
+ },
+ {
+  "name": "BM_matmul/N:512",
+  "label": "",
+  "measurements": [
+   {
+    "real_time": 91.93508160096826,
+    "cpu_time": 91.79324080000005,
+    "real_time_other": 10.514236850891638,
+    "cpu_time_other": 10.495804432835824,
+    "time": -0.8856341162938512,
+    "cpu": -0.8856581994342679
+   }
+  ],
+  "time_unit": "ms",
+  "run_type": "iteration",
+  "aggregate_name": "",
+  "utest": {}
+ },
+ {
+  "name": "BM_matmul/N:1024",
+  "label": "",
+  "measurements": [
+   {
+    "real_time": 2195.775357002276,
+    "cpu_time": 2192.635367,
+    "real_time_other": 89.19273537503614,
+    "cpu_time_other": 89.02471237500004,
+    "time": -0.9593798449870554,
+    "cpu": -0.9593983050192221
+   }
+  ],
+  "time_unit": "ms",
+  "run_type": "iteration",
+  "aggregate_name": "",
+  "utest": {}
+ },
+ {
+  "name": "BM_linear/in=out:128",
+  "label": "",
+  "measurements": [
+   {
+    "real_time": 0.5591886067656218,
+    "cpu_time": 0.5585607655116839,
+    "real_time_other": 0.5612300071834289,
+    "cpu_time_other": 0.5604564836392658,
+    "time": 0.003650647372117733,
+    "cpu": 0.003393933560380516
+   }
+  ],
+  "time_unit": "ms",
+  "run_type": "iteration",
+  "aggregate_name": "",
+  "utest": {}
+ },
+ {
+  "name": "BM_linear/in=out:256",
+  "label": "",
+  "measurements": [
+   {
+    "real_time": 2.522191640335929,
+    "cpu_time": 2.5192954748201433,
+    "real_time_other": 2.521471075505092,
+    "cpu_time_other": 2.5183163525179846,
+    "time": -0.0002856899607918268,
+    "cpu": -0.00038864925212021313
+   }
+  ],
+  "time_unit": "ms",
+  "run_type": "iteration",
+  "aggregate_name": "",
+  "utest": {}
+ },
+ {
+  "name": "BM_linear/in=out:512",
+  "label": "",
+  "measurements": [
+   {
+    "real_time": 12.225859719093709,
+    "cpu_time": 12.20524063157893,
+    "real_time_other": 12.18416643101152,
+    "cpu_time_other": 12.16639529310346,
+    "time": -0.003410254087659393,
+    "cpu": -0.0031826769867170485
+   }
+  ],
+  "time_unit": "ms",
+  "run_type": "iteration",
+  "aggregate_name": "",
+  "utest": {}
+ },
+ {
+  "name": "BM_linear/in=out:1024",
+  "label": "",
+  "measurements": [
+   {
+    "real_time": 52.828223691903986,
+    "cpu_time": 52.73023130769229,
+    "real_time_other": 52.88867876963475,
+    "cpu_time_other": 52.79945076923075,
+    "time": 0.0011443708212364129,
+    "cpu": 0.0013127092338083794
+   }
+  ],
+  "time_unit": "ms",
+  "run_type": "iteration",
+  "aggregate_name": "",
+  "utest": {}
+ },
+ {
+  "name": "BM_linear/in=out:2048",
+  "label": "",
+  "measurements": [
+   {
+    "real_time": 222.39766433388772,
+    "cpu_time": 221.93862366666653,
+    "real_time_other": 222.12587366326866,
+    "cpu_time_other": 221.66323900000032,
+    "time": -0.0012220931880427162,
+    "cpu": -0.0012408145194223506
+   }
+  ],
+  "time_unit": "ms",
+  "run_type": "iteration",
+  "aggregate_name": "",
+  "utest": {}
+ },
+ {
+  "name": "BM_layernorm/rows:16",
+  "label": "",
+  "measurements": [
+   {
+    "real_time": 16.50472107871059,
+    "cpu_time": 16.48461456838339,
+    "real_time_other": 16.430271852877443,
+    "cpu_time_other": 16.41205033438931,
+    "time": -0.004510783640517102,
+    "cpu": -0.004401936951152829
+   }
+  ],
+  "time_unit": "us",
+  "run_type": "iteration",
+  "aggregate_name": "",
+  "utest": {}
+ },
+ {
+  "name": "BM_layernorm/rows:64",
+  "label": "",
+  "measurements": [
+   {
+    "real_time": 65.19519131097618,
+    "cpu_time": 65.11073671452543,
+    "real_time_other": 64.93888945614371,
+    "cpu_time_other": 64.86294727575995,
+    "time": -0.003931299988214336,
+    "cpu": -0.003805661727525825
+   }
+  ],
+  "time_unit": "us",
+  "run_type": "iteration",
+  "aggregate_name": "",
+  "utest": {}
+ },
+ {
+  "name": "BM_layernorm/rows:256",
+  "label": "",
+  "measurements": [
+   {
+    "real_time": 277.857369401332,
+    "cpu_time": 277.3598485929449,
+    "real_time_other": 277.0707526661236,
+    "cpu_time_other": 276.5778199445984,
+    "time": -0.0028310090781584023,
+    "cpu": -0.00281954526696552
+   }
+  ],
+  "time_unit": "us",
+  "run_type": "iteration",
+  "aggregate_name": "",
+  "utest": {}
+ },
+ {
+  "name": "BM_layernorm/rows:1024",
+  "label": "",
+  "measurements": [
+   {
+    "real_time": 1125.491788033637,
+    "cpu_time": 1123.121650485435,
+    "real_time_other": 1123.3621233912297,
+    "cpu_time_other": 1120.8452932692308,
+    "time": -0.0018922080685529247,
+    "cpu": -0.002026812692303166
+   }
+  ],
+  "time_unit": "us",
+  "run_type": "iteration",
+  "aggregate_name": "",
+  "utest": {}
+ },
+ {
+  "name": "BM_layernorm/rows:4096",
+  "label": "",
+  "measurements": [
+   {
+    "real_time": 4934.880335895286,
+    "cpu_time": 4924.021882812491,
+    "real_time_other": 4907.485771033814,
+    "cpu_time_other": 4896.433305343506,
+    "time": -0.005551211578973925,
+    "cpu": -0.005602854358808626
+   }
+  ],
+  "time_unit": "us",
+  "run_type": "iteration",
+  "aggregate_name": "",
+  "utest": {}
+ },
+ {
+  "name": "BM_layernorm/rows:16384",
+  "label": "",
+  "measurements": [
+   {
+    "real_time": 36336.90378965663,
+    "cpu_time": 36253.72599999999,
+    "real_time_other": 36451.01684225282,
+    "cpu_time_other": 36364.97594736837,
+    "time": 0.003140417611163532,
+    "cpu": 0.0030686486505796854
+   }
+  ],
+  "time_unit": "us",
+  "run_type": "iteration",
+  "aggregate_name": "",
+  "utest": {}
+ },
+ {
+  "name": "BM_gelu/rows:16",
+  "label": "",
+  "measurements": [
+   {
+    "real_time": 84.24231051891275,
+    "cpu_time": 84.13242728039529,
+    "real_time_other": 84.14946217912902,
+    "cpu_time_other": 84.04639582579334,
+    "time": -0.0011021580392537248,
+    "cpu": -0.0010225718831958408
+   }
+  ],
+  "time_unit": "us",
+  "run_type": "iteration",
+  "aggregate_name": "",
+  "utest": {}
+ },
+ {
+  "name": "BM_gelu/rows:64",
+  "label": "",
+  "measurements": [
+   {
+    "real_time": 336.13007965409633,
+    "cpu_time": 335.618639155469,
+    "real_time_other": 337.3161554386408,
+    "cpu_time_other": 336.8267795957652,
+    "time": 0.0035286213770723347,
+    "cpu": 0.0035997417882876535
+   }
+  ],
+  "time_unit": "us",
+  "run_type": "iteration",
+  "aggregate_name": "",
+  "utest": {}
+ },
+ {
+  "name": "BM_gelu/rows:256",
+  "label": "",
+  "measurements": [
+   {
+    "real_time": 1372.9585579668276,
+    "cpu_time": 1370.1291316306483,
+    "real_time_other": 1375.452215685144,
+    "cpu_time_other": 1372.8960745098038,
+    "time": 0.0018162658325311587,
+    "cpu": 0.0020194759860791126
+   }
+  ],
+  "time_unit": "us",
+  "run_type": "iteration",
+  "aggregate_name": "",
+  "utest": {}
+ },
+ {
+  "name": "BM_gelu/rows:1024",
+  "label": "",
+  "measurements": [
+   {
+    "real_time": 5527.16719196178,
+    "cpu_time": 5517.613456000021,
+    "real_time_other": 5539.080531716103,
+    "cpu_time_other": 5530.409253968256,
+    "time": 0.002155415123256721,
+    "cpu": 0.002319081985404496
+   }
+  ],
+  "time_unit": "us",
+  "run_type": "iteration",
+  "aggregate_name": "",
+  "utest": {}
+ },
+ {
+  "name": "BM_gelu/rows:4096",
+  "label": "",
+  "measurements": [
+   {
+    "real_time": 22338.369258044797,
+    "cpu_time": 22305.12890322574,
+    "real_time_other": 22447.347128857677,
+    "cpu_time_other": 22411.940096774175,
+    "time": 0.00487850610552662,
+    "cpu": 0.004788638254988387
+   }
+  ],
+  "time_unit": "us",
+  "run_type": "iteration",
+  "aggregate_name": "",
+  "utest": {}
+ },
+ {
+  "name": "BM_gelu/rows:16384",
+  "label": "",
+  "measurements": [
+   {
+    "real_time": 106861.50500051944,
+    "cpu_time": 106670.6352857142,
+    "real_time_other": 106706.90814315874,
+    "cpu_time_other": 106540.28528571453,
+    "time": -0.0014467029765297024,
+    "cpu": -0.0012219857850338327
+   }
+  ],
+  "time_unit": "us",
+  "run_type": "iteration",
+  "aggregate_name": "",
+  "utest": {}
+ },
+ {
+  "name": "BM_attention/T:64",
+  "label": "",
+  "measurements": [
+   {
+    "real_time": 0.37394876791894055,
+    "cpu_time": 0.37339462187997885,
+    "real_time_other": 0.37358001438578564,
+    "cpu_time_other": 0.37308133084709666,
+    "time": -0.0009861070948489978,
+    "cpu": -0.000839034668750243
+   }
+  ],
+  "time_unit": "ms",
+  "run_type": "iteration",
+  "aggregate_name": "",
+  "utest": {}
+ },
+ {
+  "name": "BM_attention/T:128",
+  "label": "",
+  "measurements": [
+   {
+    "real_time": 1.500091970159011,
+    "cpu_time": 1.4977497633262247,
+    "real_time_other": 1.5057964537728337,
+    "cpu_time_other": 1.5036443268817268,
+    "time": 0.003802755915837625,
+    "cpu": 0.0039356130775887255
+   }
+  ],
+  "time_unit": "ms",
+  "run_type": "iteration",
+  "aggregate_name": "",
+  "utest": {}
+ },
+ {
+  "name": "BM_attention/T:256",
+  "label": "",
+  "measurements": [
+   {
+    "real_time": 6.2321675268322,
+    "cpu_time": 6.219777749999997,
+    "real_time_other": 6.366011000037278,
+    "cpu_time_other": 6.354334900000001,
+    "time": 0.021476231604626136,
+    "cpu": 0.021633755321885016
+   }
+  ],
+  "time_unit": "ms",
+  "run_type": "iteration",
+  "aggregate_name": "",
+  "utest": {}
+ },
+ {
+  "name": "BM_attention/T:512",
+  "label": "",
+  "measurements": [
+   {
+    "real_time": 29.764124999928754,
+    "cpu_time": 29.713990208333357,
+    "real_time_other": 29.963799391027905,
+    "cpu_time_other": 29.910680260869537,
+    "time": 0.006708559082439989,
+    "cpu": 0.006619442597817708
+   }
+  ],
+  "time_unit": "ms",
+  "run_type": "iteration",
+  "aggregate_name": "",
+  "utest": {}
+ },
+ {
+  "name": "BM_attention/T:1024",
+  "label": "",
+  "measurements": [
+   {
+    "real_time": 145.9903420007322,
+    "cpu_time": 145.69444819999973,
+    "real_time_other": 142.341961801867,
+    "cpu_time_other": 142.0878162000001,
+    "time": -0.024990558614123252,
+    "cpu": -0.0247547661874437
+   }
+  ],
+  "time_unit": "ms",
+  "run_type": "iteration",
+  "aggregate_name": "",
+  "utest": {}
+ },
+ {
+  "name": "BM_forward/T:16",
+  "label": "",
+  "measurements": [
+   {
+    "real_time": 4.032138224149889,
+    "cpu_time": 4.026090522988511,
+    "real_time_other": 4.032290747122245,
+    "cpu_time_other": 4.026304339080454,
+    "time": 3.78268213729638e-05,
+    "cpu": 5.310762158030623e-05
+   }
+  ],
+  "time_unit": "ms",
+  "run_type": "iteration",
+  "aggregate_name": "",
+  "utest": {}
+ },
+ {
+  "name": "BM_forward/T:32",
+  "label": "",
+  "measurements": [
+   {
+    "real_time": 8.11522601148242,
+    "cpu_time": 8.104170022988502,
+    "real_time_other": 8.104923081402884,
+    "cpu_time_other": 8.094149279069756,
+    "time": -0.0012695801774292492,
+    "cpu": -0.0012364923107882697
+   }
+  ],
+  "time_unit": "ms",
+  "run_type": "iteration",
+  "aggregate_name": "",
+  "utest": {}
+ },
+ {
+  "name": "BM_forward/T:64",
+  "label": "",
+  "measurements": [
+   {
+    "real_time": 16.3961747210462,
+    "cpu_time": 16.373842534883657,
+    "real_time_other": 16.370704976590027,
+    "cpu_time_other": 16.34872725581393,
+    "time": -0.0015533955260601823,
+    "cpu": -0.0015338659215892684
+   }
+  ],
+  "time_unit": "ms",
+  "run_type": "iteration",
+  "aggregate_name": "",
+  "utest": {}
+ },
+ {
+  "name": "BM_forward/T:128",
+  "label": "",
+  "measurements": [
+   {
+    "real_time": 33.593988999546994,
+    "cpu_time": 33.54861033333328,
+    "real_time_other": 33.502014047588176,
+    "cpu_time_other": 33.46061066666669,
+    "time": -0.002737839556953426,
+    "cpu": -0.002623049532968448
+   }
+  ],
+  "time_unit": "ms",
+  "run_type": "iteration",
+  "aggregate_name": "",
+  "utest": {}
+ },
+ {
+  "name": "OVERALL_GEOMEAN",
+  "label": "",
+  "measurements": [
+   {
+    "real_time": 0.0044321157064549045,
+    "cpu_time": 0.00442501594130655,
+    "real_time_other": 0.0032378704775926324,
+    "cpu_time_other": 0.003232757326805639,
+    "time": -0.2694526289381347,
+    "cpu": -0.2694360043703886
+   }
+  ],
+  "time_unit": "s",
+  "run_type": "aggregate",
+  "aggregate_name": "geomean",
+  "utest": {}
+ }
+]
