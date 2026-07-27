@@ -1,6 +1,6 @@
 {
   "context": {
-    "date": "2026-07-27T13:53:20-04:00",
+    "date": "2026-07-27T17:07:29-04:00",
     "host_name": "fedora",
     "executable": "./build/benchmarks",
     "num_cpus": 20,
@@ -32,7 +32,7 @@
         "num_sharing": 20
       }
     ],
-    "load_avg": [0.580566,0.288086,0.331543],
+    "load_avg": [0.187012,0.341797,0.421875],
     "library_version": "v1.9.1",
     "library_build_type": "release",
     "json_schema_version": 1
@@ -47,11 +47,11 @@
       "repetitions": 1,
       "repetition_index": 0,
       "threads": 1,
-      "iterations": 40954,
-      "real_time": 1.7071185451409898e-02,
-      "cpu_time": 1.7052865849489673e-02,
+      "iterations": 66621,
+      "real_time": 1.0291816483466153e-02,
+      "cpu_time": 1.0279004428033202e-02,
       "time_unit": "ms",
-      "FLOP/s": 3.0744861575023178e+10,
+      "FLOP/s": 5.1005717885493500e+10,
       "WS_MiB": 4.6875000000000000e-02
     },
     {
@@ -63,11 +63,11 @@
       "repetitions": 1,
       "repetition_index": 0,
       "threads": 1,
-      "iterations": 5098,
-      "real_time": 1.3706520871687117e-01,
-      "cpu_time": 1.3690886720282469e-01,
+      "iterations": 6843,
+      "real_time": 1.0201764708387866e-01,
+      "cpu_time": 1.0190501344439573e-01,
       "time_unit": "ms",
-      "FLOP/s": 3.0635736645065628e+10,
+      "FLOP/s": 4.1158956347997673e+10,
       "WS_MiB": 1.8750000000000000e-01
     },
     {
@@ -79,11 +79,11 @@
       "repetitions": 1,
       "repetition_index": 0,
       "threads": 1,
-      "iterations": 643,
-      "real_time": 1.0883584214826325e+00,
-      "cpu_time": 1.0869522814930019e+00,
+      "iterations": 701,
+      "real_time": 9.9558624526626627e-01,
+      "cpu_time": 9.9428340085591960e-01,
       "time_unit": "ms",
-      "FLOP/s": 3.0870197865458031e+10,
+      "FLOP/s": 3.3747352084038593e+10,
       "WS_MiB": 7.5000000000000000e-01
     },
     {
@@ -95,11 +95,11 @@
       "repetitions": 1,
       "repetition_index": 0,
       "threads": 1,
-      "iterations": 77,
-      "real_time": 9.0669281432985684e+00,
-      "cpu_time": 9.0517376493506472e+00,
+      "iterations": 103,
+      "real_time": 6.7852382521027499e+00,
+      "cpu_time": 6.7737894077669907e+00,
       "time_unit": "ms",
-      "FLOP/s": 2.9655682300873688e+10,
+      "FLOP/s": 3.9628550555794579e+10,
       "WS_MiB": 3.0000000000000000e+00
     },
     {
@@ -111,11 +111,11 @@
       "repetitions": 1,
       "repetition_index": 0,
       "threads": 1,
-      "iterations": 9,
-      "real_time": 7.9229082996284376e+01,
-      "cpu_time": 7.9095016888888850e+01,
+      "iterations": 10,
+      "real_time": 6.0578886000439525e+01,
+      "cpu_time": 6.0472435400000009e+01,
       "time_unit": "ms",
-      "FLOP/s": 2.7150681957837414e+10,
+      "FLOP/s": 3.5511777122837685e+10,
       "WS_MiB": 1.2000000000000000e+01
     },
     {
@@ -128,10 +128,10 @@
       "repetition_index": 0,
       "threads": 1,
       "iterations": 1,
-      "real_time": 7.1148308098781854e+02,
-      "cpu_time": 7.1026559900000041e+02,
+      "real_time": 5.8674290799535811e+02,
+      "cpu_time": 5.8571129900000017e+02,
       "time_unit": "ms",
-      "FLOP/s": 2.4187950547214931e+10,
+      "FLOP/s": 2.9331633542551815e+10,
       "WS_MiB": 4.8000000000000000e+01
     },
     {
@@ -144,10 +144,10 @@
       "repetition_index": 0,
       "threads": 1,
       "iterations": 1,
-      "real_time": 7.5904718110105023e+03,
-      "cpu_time": 7.5692263999999996e+03,
+      "real_time": 6.2324177739210427e+03,
+      "cpu_time": 6.2225304299999998e+03,
       "time_unit": "ms",
-      "FLOP/s": 1.8157595797636600e+10,
+      "FLOP/s": 2.2087309177208797e+10,
       "WS_MiB": 1.9200000000000000e+02
     },
     {
@@ -160,8 +160,8 @@
       "threads": 1,
       "aggregate_name": "BigO",
       "aggregate_unit": "time",
-      "cpu_coefficient": 1.0971543695702536e-01,
-      "real_coefficient": 1.1002197815055573e-01,
+      "cpu_coefficient": 9.0197379474433875e-02,
+      "real_coefficient": 9.0340882459812408e-02,
       "big_o": "N^3",
       "time_unit": "ns"
     },
@@ -175,7 +175,7 @@
       "threads": 1,
       "aggregate_name": "RMS",
       "aggregate_unit": "percentage",
-      "rms": 7.5025313306219935e-02
+      "rms": 7.4693366654189020e-02
     },
     {
       "name": "BM_linear/in=out:128",
@@ -186,11 +186,11 @@
       "repetitions": 1,
       "repetition_index": 0,
       "threads": 1,
-      "iterations": 4906,
-      "real_time": 1.4282037158568056e-01,
-      "cpu_time": 1.4265454015491214e-01,
+      "iterations": 6434,
+      "real_time": 1.0893558610371382e-01,
+      "cpu_time": 1.0879627012744796e-01,
       "time_unit": "ms",
-      "FLOP/s": 2.9401826226107491e+10,
+      "FLOP/s": 3.8551909868662201e+10,
       "WS_MiB": 1.8750000000000000e-01
     },
     {
@@ -202,11 +202,11 @@
       "repetitions": 1,
       "repetition_index": 0,
       "threads": 1,
-      "iterations": 1210,
-      "real_time": 5.7925918511853913e-01,
-      "cpu_time": 5.7842961157024908e-01,
+      "iterations": 1311,
+      "real_time": 5.2954079105549301e-01,
+      "cpu_time": 5.2872813119755979e-01,
       "time_unit": "ms",
-      "FLOP/s": 2.9004766810701981e+10,
+      "FLOP/s": 3.1731271725602913e+10,
       "WS_MiB": 5.0000000000000000e-01
     },
     {
@@ -218,11 +218,11 @@
       "repetitions": 1,
       "repetition_index": 0,
       "threads": 1,
-      "iterations": 281,
-      "real_time": 2.4744989145364866e+00,
-      "cpu_time": 2.4701833024911042e+00,
+      "iterations": 365,
+      "real_time": 1.9202183013501233e+00,
+      "cpu_time": 1.9167860465753446e+00,
       "time_unit": "ms",
-      "FLOP/s": 2.7167564420147591e+10,
+      "FLOP/s": 3.5011139673048584e+10,
       "WS_MiB": 1.5000000000000000e+00
     },
     {
@@ -234,11 +234,11 @@
       "repetitions": 1,
       "repetition_index": 0,
       "threads": 1,
-      "iterations": 58,
-      "real_time": 1.2123945879685724e+01,
-      "cpu_time": 1.2102448482758620e+01,
+      "iterations": 61,
+      "real_time": 1.1358967606268335e+01,
+      "cpu_time": 1.1339682967213140e+01,
       "time_unit": "ms",
-      "FLOP/s": 2.2180260166562019e+10,
+      "FLOP/s": 2.3672218771559814e+10,
       "WS_MiB": 5.0000000000000000e+00
     },
     {
@@ -250,11 +250,11 @@
       "repetitions": 1,
       "repetition_index": 0,
       "threads": 1,
-      "iterations": 10,
-      "real_time": 6.0764555400237441e+01,
-      "cpu_time": 6.0653503900000054e+01,
+      "iterations": 11,
+      "real_time": 5.1482142002152450e+01,
+      "cpu_time": 5.1380857363636387e+01,
       "time_unit": "ms",
-      "FLOP/s": 1.7702882025913738e+10,
+      "FLOP/s": 2.0897701577862652e+10,
       "WS_MiB": 1.8000000000000000e+01
     },
     {
@@ -267,10 +267,10 @@
       "repetition_index": 0,
       "threads": 1,
       "iterations": 2,
-      "real_time": 3.7619244601228274e+02,
-      "cpu_time": 3.7555672449999912e+02,
+      "real_time": 3.1393461354309693e+02,
+      "cpu_time": 3.1335672450000015e+02,
       "time_unit": "ms",
-      "FLOP/s": 1.1436267854658026e+10,
+      "FLOP/s": 1.3706319220859732e+10,
       "WS_MiB": 6.8000000000000000e+01
     },
     {
@@ -283,8 +283,8 @@
       "threads": 1,
       "aggregate_name": "BigO",
       "aggregate_unit": "time",
-      "cpu_coefficient": 5.4910620870346812e-03,
-      "real_coefficient": 5.5003722867646102e-03,
+      "cpu_coefficient": 4.5832859068358290e-03,
+      "real_coefficient": 4.5917496746841280e-03,
       "big_o": "N^3",
       "time_unit": "ns"
     },
@@ -298,7 +298,7 @@
       "threads": 1,
       "aggregate_name": "RMS",
       "aggregate_unit": "percentage",
-      "rms": 8.1708092916293093e-02
+      "rms": 8.9158365160543387e-02
     },
     {
       "name": "BM_layernorm/rows:16",
@@ -309,12 +309,12 @@
       "repetitions": 1,
       "repetition_index": 0,
       "threads": 1,
-      "iterations": 42489,
-      "real_time": 1.6493733436815337e+01,
-      "cpu_time": 1.6474845607098320e+01,
+      "iterations": 217419,
+      "real_time": 3.2719566092591847e+00,
+      "cpu_time": 3.2293437970002703e+00,
       "time_unit": "us",
       "WS_MiB": 6.2500000000000000e-02,
-      "bytes_per_second": 7.9558863934680252e+09
+      "bytes_per_second": 4.0587812335667847e+10
     },
     {
       "name": "BM_layernorm/rows:64",
@@ -325,12 +325,12 @@
       "repetitions": 1,
       "repetition_index": 0,
       "threads": 1,
-      "iterations": 10780,
-      "real_time": 6.4970321613338001e+01,
-      "cpu_time": 6.4891473933209937e+01,
+      "iterations": 56572,
+      "real_time": 1.2389476260773925e+01,
+      "cpu_time": 1.2373523845718738e+01,
       "time_unit": "us",
       "WS_MiB": 2.5000000000000000e-01,
-      "bytes_per_second": 8.0794589523367519e+09
+      "bytes_per_second": 4.2371761394504005e+10
     },
     {
       "name": "BM_layernorm/rows:256",
@@ -341,12 +341,12 @@
       "repetitions": 1,
       "repetition_index": 0,
       "threads": 1,
-      "iterations": 2534,
-      "real_time": 2.7667018310637337e+02,
-      "cpu_time": 2.7616352052091520e+02,
+      "iterations": 8561,
+      "real_time": 8.2005350774371863e+01,
+      "cpu_time": 8.1836145076509624e+01,
       "time_unit": "us",
       "WS_MiB": 1.0000000000000000e+00,
-      "bytes_per_second": 7.5938776998650427e+09
+      "bytes_per_second": 2.5626231514685192e+10
     },
     {
       "name": "BM_layernorm/rows:1024",
@@ -357,12 +357,12 @@
       "repetitions": 1,
       "repetition_index": 0,
       "threads": 1,
-      "iterations": 624,
-      "real_time": 1.1222064022149425e+03,
-      "cpu_time": 1.1196109391025623e+03,
+      "iterations": 1885,
+      "real_time": 3.7284179575820343e+02,
+      "cpu_time": 3.7193944190981483e+02,
       "time_unit": "us",
       "WS_MiB": 4.0000000000000000e+00,
-      "bytes_per_second": 7.4924312607413340e+09
+      "bytes_per_second": 2.2553693033808468e+10
     },
     {
       "name": "BM_layernorm/rows:4096",
@@ -373,12 +373,12 @@
       "repetitions": 1,
       "repetition_index": 0,
       "threads": 1,
-      "iterations": 134,
-      "real_time": 4.7308900445671889e+03,
-      "cpu_time": 4.7200340820895426e+03,
+      "iterations": 354,
+      "real_time": 1.9147533332760640e+03,
+      "cpu_time": 1.9090104180790913e+03,
       "time_unit": "us",
       "WS_MiB": 1.6000000000000000e+01,
-      "bytes_per_second": 7.1089384984155807e+09
+      "bytes_per_second": 1.7576872122973309e+10
     },
     {
       "name": "BM_layernorm/rows:16384",
@@ -389,12 +389,12 @@
       "repetitions": 1,
       "repetition_index": 0,
       "threads": 1,
-      "iterations": 19,
-      "real_time": 3.6778838052046733e+04,
-      "cpu_time": 3.6697770894736692e+04,
+      "iterations": 26,
+      "real_time": 2.7026509843730870e+04,
+      "cpu_time": 2.6956331807692361e+04,
       "time_unit": "us",
       "WS_MiB": 6.4000000000000000e+01,
-      "bytes_per_second": 3.6573809451529908e+09
+      "bytes_per_second": 4.9790798302052031e+09
     },
     {
       "name": "BM_gelu/rows:16",
@@ -405,12 +405,12 @@
       "repetitions": 1,
       "repetition_index": 0,
       "threads": 1,
-      "iterations": 8321,
-      "real_time": 8.4064947001917176e+01,
-      "cpu_time": 8.3975806513640009e+01,
+      "iterations": 10685,
+      "real_time": 6.5886118483263786e+01,
+      "cpu_time": 6.5795435470285483e+01,
       "time_unit": "us",
       "WS_MiB": 6.2500000000000000e-02,
-      "items_per_second": 1.9510381239790514e+08
+      "items_per_second": 2.4901423454214144e+08
     },
     {
       "name": "BM_gelu/rows:64",
@@ -421,12 +421,12 @@
       "repetitions": 1,
       "repetition_index": 0,
       "threads": 1,
-      "iterations": 2085,
-      "real_time": 3.3570228393549183e+02,
-      "cpu_time": 3.3531150935251782e+02,
+      "iterations": 2694,
+      "real_time": 2.5984336894818631e+02,
+      "cpu_time": 2.5949096585003650e+02,
       "time_unit": "us",
       "WS_MiB": 2.5000000000000000e-01,
-      "items_per_second": 1.9544810772093439e+08
+      "items_per_second": 2.5255599856942293e+08
     },
     {
       "name": "BM_gelu/rows:256",
@@ -437,12 +437,12 @@
       "repetitions": 1,
       "repetition_index": 0,
       "threads": 1,
-      "iterations": 510,
-      "real_time": 1.3720528921112418e+03,
-      "cpu_time": 1.3696910117647101e+03,
+      "iterations": 653,
+      "real_time": 1.0749076769058272e+03,
+      "cpu_time": 1.0727525987748847e+03,
       "time_unit": "us",
       "WS_MiB": 1.0000000000000000e+00,
-      "items_per_second": 1.9138915109200695e+08
+      "items_per_second": 2.4436575618588689e+08
     },
     {
       "name": "BM_gelu/rows:1024",
@@ -453,12 +453,12 @@
       "repetitions": 1,
       "repetition_index": 0,
       "threads": 1,
-      "iterations": 125,
-      "real_time": 5.5192120000720024e+03,
-      "cpu_time": 5.5100069199999953e+03,
+      "iterations": 163,
+      "real_time": 4.2959390246692155e+03,
+      "cpu_time": 4.2879924846625700e+03,
       "time_unit": "us",
       "WS_MiB": 4.0000000000000000e+00,
-      "items_per_second": 1.9030393522627389e+08
+      "items_per_second": 2.4453774202043971e+08
     },
     {
       "name": "BM_gelu/rows:4096",
@@ -469,12 +469,12 @@
       "repetitions": 1,
       "repetition_index": 0,
       "threads": 1,
-      "iterations": 31,
-      "real_time": 2.2447220226299138e+04,
-      "cpu_time": 2.2410445258064472e+04,
+      "iterations": 38,
+      "real_time": 1.7740424054576772e+04,
+      "cpu_time": 1.7710340342105257e+04,
       "time_unit": "us",
       "WS_MiB": 1.6000000000000000e+01,
-      "items_per_second": 1.8715844115103719e+08
+      "items_per_second": 2.3682797275376451e+08
     },
     {
       "name": "BM_gelu/rows:16384",
@@ -485,12 +485,12 @@
       "repetitions": 1,
       "repetition_index": 0,
       "threads": 1,
-      "iterations": 7,
-      "real_time": 1.0725385842878105e+05,
-      "cpu_time": 1.0706576057142872e+05,
+      "iterations": 8,
+      "real_time": 9.1219086505589075e+04,
+      "cpu_time": 9.1042723000000158e+04,
       "time_unit": "us",
       "WS_MiB": 6.4000000000000000e+01,
-      "items_per_second": 1.5670010571500224e+08
+      "items_per_second": 1.8427849527303758e+08
     },
     {
       "name": "BM_attention/T:64",
@@ -501,11 +501,11 @@
       "repetitions": 1,
       "repetition_index": 0,
       "threads": 1,
-      "iterations": 1881,
-      "real_time": 3.7677094206889294e-01,
-      "cpu_time": 3.7223158001063289e-01,
+      "iterations": 4373,
+      "real_time": 1.5991806263892500e-01,
+      "cpu_time": 1.5971603590212677e-01,
       "time_unit": "ms",
-      "FLOP/s": 1.1267996121877108e+10,
+      "FLOP/s": 2.6261007395464348e+10,
       "WS_MiB": 3.7500000000000000e-01
     },
     {
@@ -517,11 +517,11 @@
       "repetitions": 1,
       "repetition_index": 0,
       "threads": 1,
-      "iterations": 467,
-      "real_time": 1.4966948287425925e+00,
-      "cpu_time": 1.4945835610278420e+00,
+      "iterations": 1192,
+      "real_time": 5.8813953853052914e-01,
+      "cpu_time": 5.8708114765100639e-01,
       "time_unit": "ms",
-      "FLOP/s": 1.1225344930505003e+10,
+      "FLOP/s": 2.8577337335950886e+10,
       "WS_MiB": 7.5000000000000000e-01
     },
     {
@@ -533,11 +533,11 @@
       "repetitions": 1,
       "repetition_index": 0,
       "threads": 1,
-      "iterations": 112,
-      "real_time": 6.2652662236359902e+00,
-      "cpu_time": 6.2542771250000087e+00,
+      "iterations": 275,
+      "real_time": 2.5399259384721518e+00,
+      "cpu_time": 2.5353764399999985e+00,
       "time_unit": "ms",
-      "FLOP/s": 1.0730075220323709e+10,
+      "FLOP/s": 2.6468994087521004e+10,
       "WS_MiB": 1.5000000000000000e+00
     },
     {
@@ -549,11 +549,11 @@
       "repetitions": 1,
       "repetition_index": 0,
       "threads": 1,
-      "iterations": 23,
-      "real_time": 2.9495189783831492e+01,
-      "cpu_time": 2.9446085000000011e+01,
+      "iterations": 59,
+      "real_time": 1.1934193084016442e+01,
+      "cpu_time": 1.1911779559321998e+01,
       "time_unit": "ms",
-      "FLOP/s": 9.1161679387938976e+09,
+      "FLOP/s": 2.2535294131591454e+10,
       "WS_MiB": 3.0000000000000000e+00
     },
     {
@@ -565,11 +565,11 @@
       "repetitions": 1,
       "repetition_index": 0,
       "threads": 1,
-      "iterations": 5,
-      "real_time": 1.4986564540304244e+02,
-      "cpu_time": 1.4960239719999890e+02,
+      "iterations": 11,
+      "real_time": 5.9766096549785949e+01,
+      "cpu_time": 5.9671848636363734e+01,
       "time_unit": "ms",
-      "FLOP/s": 7.1773036000522575e+09,
+      "FLOP/s": 1.7994110263674099e+10,
       "WS_MiB": 6.0000000000000000e+00
     },
     {
@@ -582,8 +582,8 @@
       "threads": 1,
       "aggregate_name": "BigO",
       "aggregate_unit": "time",
-      "cpu_coefficient": 1.4070847727993515e+02,
-      "real_coefficient": 1.4095547493577814e+02,
+      "cpu_coefficient": 5.6163768317172881e+01,
+      "real_coefficient": 5.6253312130897548e+01,
       "big_o": "N^2",
       "time_unit": "ns"
     },
@@ -597,7 +597,7 @@
       "threads": 1,
       "aggregate_name": "RMS",
       "aggregate_unit": "percentage",
-      "rms": 9.9303856462897938e-02
+      "rms": 9.4160970353789161e-02
     },
     {
       "name": "BM_forward/T:16",
@@ -608,11 +608,11 @@
       "repetitions": 1,
       "repetition_index": 0,
       "threads": 1,
-      "iterations": 472,
-      "real_time": 1.4855689258152871e+00,
-      "cpu_time": 1.4829864449152457e+00,
+      "iterations": 553,
+      "real_time": 1.2675774467698084e+00,
+      "cpu_time": 1.2649645533453864e+00,
       "time_unit": "ms",
-      "items_per_second": 1.0789039950337792e+04
+      "items_per_second": 1.2648575770511217e+04
     },
     {
       "name": "BM_forward/T:32",
@@ -623,11 +623,11 @@
       "repetitions": 1,
       "repetition_index": 0,
       "threads": 1,
-      "iterations": 270,
-      "real_time": 2.5922268221620470e+00,
-      "cpu_time": 2.5873836629629818e+00,
+      "iterations": 329,
+      "real_time": 2.1310721886398039e+00,
+      "cpu_time": 2.1268619057750748e+00,
       "time_unit": "ms",
-      "items_per_second": 1.2367705825024310e+04
+      "items_per_second": 1.5045640675170445e+04
     },
     {
       "name": "BM_forward/T:64",
@@ -638,11 +638,11 @@
       "repetitions": 1,
       "repetition_index": 0,
       "threads": 1,
-      "iterations": 141,
-      "real_time": 4.9640372270018069e+00,
-      "cpu_time": 4.9555430141843670e+00,
+      "iterations": 183,
+      "real_time": 3.8251179617783819e+00,
+      "cpu_time": 3.8171293224043743e+00,
       "time_unit": "ms",
-      "items_per_second": 1.2914830890744224e+04
+      "items_per_second": 1.6766526516237336e+04
     },
     {
       "name": "BM_forward/T:128",
@@ -653,11 +653,11 @@
       "repetitions": 1,
       "repetition_index": 0,
       "threads": 1,
-      "iterations": 68,
-      "real_time": 1.0293239867999493e+01,
-      "cpu_time": 1.0276938779411767e+01,
+      "iterations": 91,
+      "real_time": 7.8254483632518204e+00,
+      "cpu_time": 7.8103779890110578e+00,
       "time_unit": "ms",
-      "items_per_second": 1.2455070789798601e+04
+      "items_per_second": 1.6388451388664129e+04
     }
   ]
 }

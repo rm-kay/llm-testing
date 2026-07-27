@@ -25,7 +25,8 @@ add_library(llm_core
 target_include_directories(llm_core PUBLIC include)
 target_compile_options(llm_core PRIVATE -Wall -Wextra)
 if(LLM_NATIVE)
-    target_compile_options(llm_core PRIVATE -march=native)
+  target_compile_options(llm_core PRIVATE -march=native)
+  target_compile_options(llm_core PRIVATE -ffast-math)
 endif()
 
 # Unit tests.
@@ -58,6 +59,7 @@ if(LLM_BUILD_BENCHMARKS)
     target_link_libraries(benchmarks PRIVATE llm_core benchmark::benchmark)
     if(LLM_NATIVE)
         target_compile_options(benchmarks PRIVATE -march=native)
+        target_compile_options(llm_core PRIVATE -ffast-math)
     endif()
 endif()
 
