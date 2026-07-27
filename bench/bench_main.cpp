@@ -50,6 +50,63 @@ void set_working_set(benchmark::State &state, double bytes) {
 
 } // namespace
 
+// static void BM_transpose(benchmark::State &state) {
+//   const int N = static_cast<int>(state.range(0));
+//   Tensor a = random_tensor({N, N}, 1);
+//   for (auto _ : state) {
+//     Tensor c = ops::transpose(a);
+//     benchmark::DoNotOptimize(c.data.data());
+//     benchmark::ClobberMemory();
+//   }
+//   state.counters["FLOP/s"] = flops(N * N);
+//   set_working_set(state, 2.0 * N * N * 4);
+//   state.SetComplexityN(N);
+// }
+// BENCHMARK(BM_transpose)
+//     ->RangeMultiplier(2)
+//     ->Range(64, 4096)
+//     ->ArgName("N")
+//     ->Complexity()
+//     ->Unit(benchmark::kMillisecond);
+
+// static void BM_transpose_col(benchmark::State &state) {
+//   const int N = static_cast<int>(state.range(0));
+//   Tensor a = random_tensor({N, 1}, 1);
+//   for (auto _ : state) {
+//     Tensor c = ops::transpose(a);
+//     benchmark::DoNotOptimize(c.data.data());
+//     benchmark::ClobberMemory();
+//   }
+//   state.counters["FLOP/s"] = flops(N);
+//   set_working_set(state, 2.0 * N * 4);
+//   state.SetComplexityN(N);
+// }
+// BENCHMARK(BM_transpose_col)
+//     ->RangeMultiplier(2)
+//     ->Range(64, 4096)
+//     ->ArgName("N")
+//     ->Complexity()
+//     ->Unit(benchmark::kMillisecond);
+
+// static void BM_transpose_row(benchmark::State &state) {
+//   const int N = static_cast<int>(state.range(0));
+//   Tensor a = random_tensor({1, N}, 1);
+//   for (auto _ : state) {
+//     Tensor c = ops::transpose(a);
+//     benchmark::DoNotOptimize(c.data.data());
+//     benchmark::ClobberMemory();
+//   }
+//   state.counters["FLOP/s"] = flops(N);
+//   set_working_set(state, 2.0 * N * 4);
+//   state.SetComplexityN(N);
+// }
+// BENCHMARK(BM_transpose_row)
+//     ->RangeMultiplier(2)
+//     ->Range(64, 4096)
+//     ->ArgName("N")
+//     ->Complexity()
+//     ->Unit(benchmark::kMillisecond);
+
 // ---- matmul: square NxN x NxN, sweeps L1 -> L2 -> L3 -----------------------
 // Working set = 3*N^2*4 bytes. N=64:48KiB(L1) ... 256:768KiB(L2) ...
 // 1024:12MiB(L3). Add ->Arg(1536)/->Arg(2048) to reach DRAM (slow: 7-17
@@ -69,7 +126,7 @@ static void BM_matmul(benchmark::State &state) {
 }
 BENCHMARK(BM_matmul)
     ->RangeMultiplier(2)
-    ->Range(64, 1024)
+    ->Range(64, 4096)
     ->ArgName("N")
     ->Complexity()
     ->Unit(benchmark::kMillisecond);
@@ -93,7 +150,7 @@ static void BM_linear(benchmark::State &state) {
 }
 BENCHMARK(BM_linear)
     ->RangeMultiplier(2)
-    ->Range(128, 2048)
+    ->Range(128, 4096)
     ->ArgName("in=out")
     ->Complexity()
     ->Unit(benchmark::kMillisecond);

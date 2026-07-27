@@ -10,6 +10,8 @@
 // the bias/activation, reusing scratch buffers, SIMD, threading, etc.
 namespace llm::ops {
 
+Tensor transpose(const Tensor &a);
+
 // Plain matrix multiply: a[M, K] x b[K, N] -> [M, N].
 Tensor matmul(const Tensor &a, const Tensor &b);
 

@@ -6,6 +6,19 @@
 
 namespace llm::ops {
 
+Tensor transpose(const Tensor &a) {
+  assert(a.shape.size() == 2);
+  const int M = a.shape[0];
+  const int N = a.shape[1];
+  Tensor out({N, M});
+  for (int j = 0; j < N; ++j) {
+    for (int i = 0; i < M; ++i) {
+      out.at(j, i) = a.at(i, j);
+    }
+  }
+  return out;
+}
+
 Tensor matmul(const Tensor &a, const Tensor &b) {
   assert(a.shape.size() == 2 && b.shape.size() == 2);
   const int M = a.shape[0];
@@ -14,11 +27,20 @@ Tensor matmul(const Tensor &a, const Tensor &b) {
   assert(b.shape[0] == K);
 
   Tensor out({M, N});
-  // Textbook triple loop, no tiling, no vectorization hints.
-  for (int i = 0; i < M; ++i) {
-    for (int k = 0; k < K; ++k) {
-      for (int j = 0; j < N; ++j) {
-        out.at(i, j) += a.at(i, k) * b.at(k, j);
+  constexpr int TILE_WIDTH = 128;
+  // triple loop with tiling: we load only a square for each at a time
+  for (int ii = 0; ii < M; ii += TILE_WIDTH) {
+    for (int kk = 0; kk < K; kk += TILE_WIDTH) {
+      for (int jj = 0; jj < N; jj += TILE_WIDTH) {
+
+        // loop ordering here auto vecs to simd
+        for (int i = ii; i < ii + TILE_WIDTH && i < M; ++i) {
+          for (int k = kk; k < kk + TILE_WIDTH && k < K; ++k) {
+            for (int j = jj; j < jj + TILE_WIDTH && j < N; ++j) {
+              out.at(i, j) += a.at(i, k) * b.at(k, j);
+            }
+          }
+        }
       }
     }
   }
@@ -38,20 +60,12 @@ Tensor linear(const Tensor &x, const Tensor &w, const Tensor &b) {
   // x is T x in, w is out x in, b is 1 x out
   // y is x @ w_t + b
   // y(t, o) = b(o) + dot(x_t, w_o)
-  Tensor y({T, out});
-  for (int t = 0; t < T; ++t) {
-    const float *xrow = x.row_ptr(t);
-    for (int o = 0; o < out; ++o) {
-      const float *wrow = w.row_ptr(o);
-      constexpr int slots = 8;
-      float acc[slots] = {0.f, 0.f, 0.f, 0.f,
-                          0.f, 0.f, 0.f, has_bias ? b[o] : 0.0f};
-      for (int i = 0; i < in; ++i) {
-        // data dependency on acc?
-        acc[i % slots] += xrow[i] * wrow[i];
-      }
-      for (int i = 0; i < slots; ++i) {
-        y.at(t, o) += acc[i];
+  auto w_t = transpose(w);
+  auto y = matmul(x, w_t);
+  if (has_bias) {
+    for (int t = 0; t < T; ++t) {
+      for (int o = 0; o < out; ++o) {
+        y.at(t, o) += b[o];
       }
     }
   }
